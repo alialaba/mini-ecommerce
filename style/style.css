@@ -112,7 +112,7 @@ header {
     visibility: visible;
     height: auto;
     top: 30px;
-    left: 100px;
+    left: 80px;
 }
 
 .nav__list,
@@ -136,6 +136,23 @@ header {
 
 .nav__item {
     margin-bottom: 2em;
+}
+
+.cart-count {
+    background: #f68b1e;
+    position: absolute;
+    bottom: 45px;
+    left: 10px;
+    padding: .2em;
+    color: #ffffff;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
@@ -289,6 +306,12 @@ img {
         display: flex;
         margin: 0;
         padding: .5em;
+    }
+    .cart-count {
+        bottom: 27px;
+        left: 88%;
+        padding: .2em;
+        color: #ffffff;
     }
     .row {
         display: flex;
