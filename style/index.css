@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.field-container {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    color: #f68b1e;
+    font-size: 1.5rem;
+}
+
+.form {
+    padding: 20px 40px;
+}
+
+.field {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 3px 0;
+}
+
+.field input {
+    width: 100%;
+    line-height: 1.5;
+    padding-top: 30px;
+    border: none;
+    outline: none;
+    /* margin: 10px 0; */
+}
+
+.field label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000000;
+}
+
+.field label::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 2px solid #f68b1e;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.name-field {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.field input:focus+.label-name .name-field,
+.field input:valid+.label-name .name-field {
+    transform: translateY(-150%);
+    color: #f68b1e;
+    font-size: .9rem;
+}
+
+.field input:focus+.label-name::after,
+.field input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+button {
+    background-color: #f68b1e;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}

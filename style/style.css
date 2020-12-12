@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+/* both navbar */
+
+.menu-icon {
+    cursor: pointer;
+    width: 2em;
+    height: 1em;
+    padding: 0em;
+    position: absolute;
+    right: 0;
+}
+
+.hamburger {
+    width: 60%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    background: #f68b1e;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.btn-in {
+    padding: 10px;
+    border: 2px solid #f68b1e;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.2em;
+    background: transparent;
+}
+
+.btn-in:focus,
+.btn-in:hover {
+    outline: none;
+}
+
+.hero {
+    color: #ffffff;
+}
+
+header {
+    /* margin: 0 auto; */
+    padding: 1em 0;
+    text-align: center;
+}
+
+.logo {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    visibility: hidden;
+    /* height: 30px; */
+}
+
+.nav {
+    position: absolute;
+    visibility: hidden;
+    height: 0px;
+}
+
+.nav-visible {
+    position: relative;
+    visibility: visible;
+    height: auto;
+    top: 30px;
+    left: 100px;
+}
+
+.nav__list,
+.search-icon,
+.cancel-icon {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav__link:hover {
+    color: #f68b1e;
+}
+
+.nav__item {
+    margin-bottom: 2em;
+}
+
+input {
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    display: none;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+}
+
+.search-btn {
+    background: #f68b1e;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+    display: none;
+}
+
+.search-btn {
+    display: none;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+    outline: none;
+}
+
+button:hover {
+    opacity: .75;
+    outline: none;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* both navbar */
+
+
+/* landing page */
+
+.hero__title {
+    margin-bottom: 1.5em;
+    margin-top: 2.5em;
+}
+
+.landing-page {
+    background-image: url(../images/unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    /* overflow-y: hidden; */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    /* height: 100vh; */
+}
+
+section {
+    padding: 100px 0;
+}
+
+
+/* landing page */
+
+
+/* product page */
+
+img {
+    width: 100%;
+}
+
+.product-page {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.product {}
+
+.product-lists {
+    list-style: none;
+    color: #ffffff;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+.cart-btn {
+    margin-top: 1em;
+    background: #f68b1e;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.cart-btn:hover,
+.cart-btn:focus {
+    outline: none;
+}
+
+@media(max-width:369px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(min-width:800px) {
+    /* both navbar */
+    form {
+        display: flex;
+    }
+    input {
+        display: block;
+    }
+    .search-btn {
+        display: block;
+    }
+    /* header {
+        padding: 0;
+    } */
+    .logo {
+        visibility: visible;
+    }
+    .menu-icon {
+        display: none;
+    }
+    .nav {
+        position: relative;
+        visibility: visible;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .nav__list {
+        display: flex;
+        margin: 0;
+        padding: .5em;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav__item {
+        margin: 0 0 0 2em;
+    }
+    /* both navbar */
+    .hero__title {
+        /* margin-top: 2.5em; */
+        font-size: 2.5rem;
+        width: 50%;
+    }
+}

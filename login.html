@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+    <div class="field-container">
+        <div class="header">
+            <h2>Login</h2>
+        </div>
+        <form action="" class="form" id="form">
+            <div class="field">
+                <!-- <small>error message</small> -->
+                <input type="text" name="" id="username" required />
+                <label for="name" class="label-name">
+                <span class="name-field">E-Mail</span>
+                </label>
+
+            </div>
+            <div class="field">
+                <input type="password" name="" id="password" required />
+                <label for="name" class="label-name">
+                <span class="name-field">Password</span>
+                </label>
+            </div>
+            <div class="field">
+                <button class="btn">Login</button>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        const loginBtn = document.querySelector('.btn');
+        const loginForm = document.getElementById("form")
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = loginForm.username.value;
+            const password = loginForm.password.value;
+
+
+            if (username === "aliaba" && password === 'web') {
+                alert('You Successfully Logged in');
+                window.location = 'product.html';
+            } else {
+                alert('Incorrect Username or Password');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
