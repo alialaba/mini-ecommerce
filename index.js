@@ -18,20 +18,21 @@
              }
          })
          .then((data) => {
-             let head = `<h1>Products</h1>`;
              let output = ``;
              data.forEach((item) => {
                  const { image, title, price, category } = item;
                  output += `
                 <div class="product">
                 <div>
-                <img class="image" src="${image}" >
+                <img class="product-image" src="${image}" >
                 </div>
                 <ul class="product-lists">
                 <li>${title}</li>
+                <div class="flex-product">
                 <li>$${price}</li>
-                <li>Category: ${category}</li>
-                <button class="cart-btn">Add to Cart</button>
+                <li><i class="fas fa-plus"></i></li>
+                </div>
+                
                 </ul>
                 
                 
@@ -40,12 +41,12 @@
                 
                 `
                      // console.log(item)
-                 displayData(output, head)
+                 displayData(output)
              })
          }).catch((err) => console.log(err))
  }
- const displayData = (output, head) => {
-     document.querySelector('.header'), innerHTML = head;
+ const displayData = (output) => {
+
      document.querySelector('.products').innerHTML = output;
 
  }

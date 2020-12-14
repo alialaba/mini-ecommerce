@@ -10,49 +10,76 @@
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 </head>
 
-<body>
-    <main class="product-page">
-        <header>
+<body class="product-page">
 
-            <div class="container row flex">
-                <div class="menu-icon">
-                    <span class="hamburger"></span>
+    <header>
+
+        <div class="container row flex">
+            <div class="menu-icon">
+                <span class="hamburger"></span>
+            </div>
+            <a href="" class="logo">
+                <small>logo</small>
+            </a>
+            <nav class="nav">
+                <div class="nav__list nav__list-primary">
+                    <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="./product.html" class="nav__link">Product</a></li>
                 </div>
-                <a href="" class="logo">
-                    <small>logo</small>
-                </a>
-                <nav class="nav">
-                    <div class="nav__list nav__list-primary">
-                        <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="./product.html" class="nav__link">Product</a></li>
-                    </div>
-                    <!-- <div class="search-icon">
+                <!-- <div class="search-icon">
                         <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-search"></i></a></li>
 
                     </div> -->
-                    <!-- <div class="cancel-icon">
+                <!-- <div class="cancel-icon">
                         <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-times"></i></a></li>
                     </div> -->
-                    <div class="nav__list nav__list-secondary">
-                        <form action="#" class="form">
-                            <input type="text" name="" id="">
-                            <button class="fas fa-search search-btn"></button>
+                <!-- <div class="nav__list nav__list-secondary">
+                    <form action="#" class="form">
+                        <input type="text" name="" id="">
+                        <button class="fas fa-search search-btn"></button>
 
-                        </form>
-                    </div>
-                    <div class="nav__list">
-                        <li class="nav__item"><a href="./login.html" class="nav__link"><i class="fas fa-user fa-x2"></i>           Login</a></li>
-                        <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-shopping-cart"></i>        Cart</a></li>
-                        <span class="cart-count">0</span>
-                    </div>
+                    </form>
+                </div> -->
+                <div class="nav__list">
+                    <li class="nav__item"><a href="./login.html" class="nav__link"><i class="fas fa-user fa-x2"></i>           Login</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-shopping-cart"></i>        Cart</a></li>
+                    <span class="cart-count">0</span>
+                </div>
 
-                </nav>
+            </nav>
+        </div>
+    </header>
+    <section class=" heading">
+        <div class="container ">
+            <h2 class="heading__title">Products</h2>
+            <p class="heading__subtitle">check out our daily deals.......</p>
+
+        </div>
+    </section>
+    <main class="main container">
+
+        <aside class="sidebar">
+
+            <div>
+                <div class="search">
+                    <form action="#" class="form">
+                        <input type="text" name="" id="" placeholder="search.....">
+                        <button class="fas fa-search search-btn"></button>
+
+                    </form>
+                </div>
+                <ul class="product-listing">
+                    <li><a href="">Category</a></li>
+                    <li><a href="">All</a></li>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Jewellries</a></li>
+                </ul>
             </div>
-        </header>
-
-        <section>
-            <div class="container">
-                <div class="header"></div>
+        </aside>
+        <section class="main-content">
+            <div>
                 <div class="products"></div>
             </div>
         </section>
