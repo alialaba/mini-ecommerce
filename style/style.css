@@ -280,20 +280,30 @@ section {
 }
 
 .product-listing {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 2em 0 0 0;
-    line-height: 50px;
-    font-size: .9rem;
-    cursor: pointer;
 }
 
-.product-listing a {
+.product-listing button {
+    line-height: 40px;
     color: #ffffff;
     font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.product-listing li:nth-child(1) {
-    font-weight: 900;
+.product-listing button:hover,
+.product-listing button:focus {
+    outline: none;
+    color: #f68b1e;
+}
+
+.product-listing button:nth-child(1) {
+    font-weight: 600;
     font-size: 1.5rem;
 }
 

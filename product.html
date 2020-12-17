@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
+    <title>Ecommerce||products</title>
     <link rel="stylesheet" href="./style/style.css">
     <script type="text/javascript" src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
@@ -26,22 +26,9 @@
                     <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="./product.html" class="nav__link">Product</a></li>
                 </div>
-                <!-- <div class="search-icon">
-                        <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-search"></i></a></li>
 
-                    </div> -->
-                <!-- <div class="cancel-icon">
-                        <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-times"></i></a></li>
-                    </div> -->
-                <!-- <div class="nav__list nav__list-secondary">
-                    <form action="#" class="form">
-                        <input type="text" name="" id="">
-                        <button class="fas fa-search search-btn"></button>
-
-                    </form>
-                </div> -->
                 <div class="nav__list">
-                    <li class="nav__item"><a href="./login.html" class="nav__link"><i class="fas fa-user fa-x2"></i>           Login</a></li>
+                    <li class="nav__item"><a href="./login.html" class="nav__link"><i class="fas fa-user fa-x2"></i>           Logout</a></li>
                     <li class="nav__item"><a href="" class="nav__link"><i class="fas fa-shopping-cart"></i>        Cart</a></li>
                     <span class="cart-count">0</span>
                 </div>
@@ -63,24 +50,25 @@
             <div>
                 <div class="search">
                     <form action="#" class="form">
-                        <input type="text" name="" id="" placeholder="search.....">
-                        <button class="fas fa-search search-btn"></button>
+                        <input type="text" name="" id="search" placeholder="search.....">
+                        <!-- <button class="fas fa-search search-btn"></button> -->
 
                     </form>
                 </div>
-                <ul class="product-listing">
-                    <li><a href="">Category</a></li>
-                    <li><a href="">All</a></li>
-                    <li><a href="">Men</a></li>
-                    <li><a href="">Women</a></li>
-                    <li><a href="">Accessories</a></li>
-                    <li><a href="">Jewellries</a></li>
-                </ul>
+                <article class="product-listing">
+                    <button>Category</button>
+                    <button>All</button>
+                    <button>Men</button>
+                    <button>Women</button>
+                    <button>Accessories</button>
+                    <button>Jewellries</button>
+
+                </article>
             </div>
         </aside>
         <section class="main-content">
             <div>
-                <div class="products"></div>
+                <div class="products" id="match-products"></div>
             </div>
         </section>
     </main>
