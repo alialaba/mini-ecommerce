@@ -20,7 +20,7 @@
          .then((data) => {
              let output = ``;
              data.forEach((item) => {
-                 const { image, title, price, category } = item;
+                 const { id, image, title, price, category } = item;
                  output += `
                   <div class="product">
                   <div>
@@ -29,29 +29,25 @@
                   <ul class="product-lists">
                   <li>${title}</li>
                   <div class="flex-product">
-                  <li>$${price}</li>
-                  <li><i class="fas fa-plus"></i></li>
+                  <li>${price}</li>
+                  <li onClick="displaySingleProduct(${id})"><i class="fas fa-plus"></i></li>
                   </div>
-
                   </ul>
-
-
-                  </div>
-
-
-                  `
+                  </div>`
                      // console.log(item)
                  displayData(output)
              })
          }).catch((err) => console.log(err))
  }
 
- //function for displaying the HTMl
+ //function for displaying the HTMl for products
  const displayData = (output) => {
      document.querySelector('.products').innerHTML = output;
  }
+
  window.onload = () => {
      loadData();
+     //  displaySingleProduct();
  }
 
  //making some search
@@ -70,6 +66,7 @@
          })
          if (searchText.length === 0) {
              matches = [];
+             //displaying the whole item after search is cleared
              matchInput.innerHTML = loadData();;
          }
 
